@@ -67,7 +67,8 @@ def rename_episode(filename, dir_path):
 
 def main():
 
-    dir_path = input("Enter the directory path (use / instead of \): ")
+    dir_path = input('Enter directory path: ')
+    dir_path = dir_path.replace("\\", "/")
 
     for filename in tqdm(os.listdir(dir_path)):
         rename_episode(filename, dir_path)
